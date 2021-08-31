@@ -11,26 +11,19 @@ namespace ConsoleApp1
             car.stop();
         }
     }
-    abstract class Vehiculable
-    {
-        public void run()
-        {
-            Console.WriteLine("arranco desde la clase abstacta");
-        }
-    }
 
     interface IVehiculable
     {
-        //public void run();
+        public void run();
         public void stop();
     }
-    class Car : Vehiculable, IVehiculable
+    class Car : IVehiculable
     {
         public void stop()
         {
             Console.WriteLine("paro");
         }
-        new public void run()
+        public void run()
         {
             Console.WriteLine("arranco desde coche");
         }
